@@ -21,7 +21,7 @@ zero-click install on all platforms, offline support, and sync multiple instance
 In no particular order:
 
 - All systems are distributed systems.
-- [Parse, don't validate.](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)[^2]
+- Parse, don't validate.[^2]
 - The cloud is just someone else's computer.
 - Cache, cache, cache.
 - If the user is confused then I'm wrong.
