@@ -12,7 +12,7 @@ While the initial description of Plutus sounds like a dime-a-dozen kind of softw
 It is designed as a p2p local-first progressive web app that gives some amazing superpowers:
 zero-click install on all platforms, offline support, and sync multiple instances in real-time over Bluetooth/internet/LAN/USB. You can even edit your expenses on your phone while on vacation and sync right back up with the instance on your home device _without conflicts_.[^1]
 
-[^1]: For the current set of features [see](features)
+[^1]: For the current set of features, [see](features)
 
 ## Design
 
