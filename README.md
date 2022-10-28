@@ -1,14 +1,12 @@
 # Plutus
 
-Plutus is a personal accounting software to keep track of all your expenses.
+Personal accounting, but with superpowers.
 
 > **_NOTE:_** Plutus is currently in development, there is no public available build.
 
 ## Description
 
-> Plutus is a personal accounting software to keep track of all your expenses.
-
-While the initial description of Plutus sounds like a dime-a-dozen kind of software, it is anything but.
+While personal accounting is a dime-a-dozen kind of software, Plutus is anything but.
 It is designed as a p2p local-first progressive web app that gives some amazing superpowers:
 zero-click install on all platforms, offline support, and sync multiple instances in real-time over Bluetooth/internet/LAN/USB. You can even edit your expenses on your phone while on vacation and sync right back up with the instance on your home device _without conflicts_.[^1]
 
