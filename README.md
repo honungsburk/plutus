@@ -71,6 +71,22 @@ This is why we will do away with categories and only use plain string tags. Then
 
 ---
 
+## Development
+
+#### Installation
+
+Good ol' `npm install` will do the trick!
+
+#### Development
+
+What about `npm run dev`?
+
+#### Testing
+
+A classic: `npm run test`!
+
+For the rest of the commands see the scripts in `package.json`.
+
 ## Features
 
 Features listed with "(MVP)" are the goal for version 1.0 of Plutus.
