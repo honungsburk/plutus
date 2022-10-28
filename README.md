@@ -21,18 +21,20 @@ zero-click install on all platforms, offline support, and sync multiple instance
 In no particular order:
 
 - All systems are distributed systems.
-- [Parse, don't validate.](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
+- [Parse, don't validate.](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)[^2]
 - The cloud is just someone else's computer.
 - Cache, cache, cache.
 - If the user is confused then I'm wrong.
+
+[^2]: "Parse, don't validate" by Alexis King, [see](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
 
 ### Technical
 
 #### Users
 
-Users will be represented using public-key cryptography.
+Users will be represented using public-key cryptography. [^3]
 
-- [pub-key](https://en.wikipedia.org/wiki/Public-key_cryptography)
+[^3]: Wikipedia entry on public-key cryptography, [see](https://en.wikipedia.org/wiki/Public-key_cryptography)
 
 #### Database
 
@@ -43,10 +45,10 @@ expect that their entries into their phones will be merged with the changes on t
 even if they haven't been synced for days or even months.
 
 To do so we need a database where the entries can be added in _any_ order and still
-derive the same state. We will use conflict-free replicated data types (CRDT), specifically sets and last-write-wins where each entry is timestamped using a hybrid logical clock (HLC). This will also allow us to only share the entries that we would like to share, allowing you to share your milk purchase with your mom but not your late night trip to the store for condoms.
+derive the same state. We will use conflict-free replicated data types (CRDT) [^4], specifically sets and last-write-wins where each entry is timestamped using a hybrid logical clock (HLC) [^5]. This will also allow us to only share the entries that we would like to share, allowing you to share your milk purchase with your mom but not your late-night trip to the store for condoms.
 
-- [CRDT](https://crdt.tech/)
-- [HLC](https://jaredforsyth.com/posts/hybrid-logical-clocks/)
+[^4]: A basic intro to the topic of CRDTs, [see](https://crdt.tech/)
+[^5]: Post on "hybrid-logical-clocks" by Jared Forsyth, [see](https://jaredforsyth.com/posts/hybrid-logical-clocks/)
 
 #### Sync
 
@@ -73,6 +75,8 @@ This is why we will do away with categories and only use plain string tags. Then
 
 ## Features
 
+Features listed with "(MVP)" are the goal for version 1.0 of Plutus.
+
 - [ ] Installable PWA (MVP)
 - [ ] Offline support (MVP)
 - [ ] Dark/Light mode
@@ -87,5 +91,3 @@ This is why we will do away with categories and only use plain string tags. Then
   - [ ] Bluetooth
   - [ ] File (export/import)
 - [ ] Track/sync expenses with other people
-
-Features listed with "(MVP)" are the goal for version 1.0 of Plutus.
