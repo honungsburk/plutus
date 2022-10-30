@@ -22,7 +22,10 @@ import * as Interface from "./Interface";
  * Instantiate a singelton in your system like so:
  * ```ts
  * const Clock = new HybridLogicalClock(() => new Date())
+ *
  * ```
+ * @remark There is no need to persist the HLC between sessions. The `hlc.now()` call will
+ * always update to the current timestamp anyway.
  *
  * @remark It can not tell you when something happened since the system clock in a node
  * could be incorrect. But can be used to order events as they are received at a node.
