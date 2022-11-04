@@ -1,16 +1,17 @@
 import { Result } from "ts-results";
 
+/**
+ * A dumb storage layer. It will not perform any validation what so ever.
+ */
 export interface IStoreEvents {
-  join(event: Event): Result<undefined, IStoreEvent.Error>;
-
-  join(...event: Array<Event>): Result<undefined, IStoreEvent.Error>;
+  join(...event: Array<Event>): Result<undefined, IStoreEvents.Error>;
 
   find(id: UUID): Event | undefined;
 
-  all(): Array<Event>;
+  findAll(): Array<Event>;
 }
 
-export namespace IStoreEvent {
+export namespace IStoreEvents {
   export enum Error {
     OverlappingUUID,
     RefrencedUUIDDoesNotExist,
@@ -19,7 +20,6 @@ export namespace IStoreEvent {
 
 /**
  * How do I join?
- * 1. Select a subset
  *  - Node
  *  - Schema
  *  - Entry
@@ -39,6 +39,31 @@ export namespace IStoreEvent {
  * - What is the best way of storing it?
  *  - Our structure is a tree.
  *  - Events that refrence each other should be close to one another.
+ * - How do users refrence one entity to another and make sure we either sync both or none?
+ * - How do we query?
+ * - How do we deal with forign keys? Do we even suport it?
+ *
+ *
+ * MVP:
+ * - Store TODO list items
+ * - Sync between apps
+ * - Persist between sessions
+ * - Sync between browser windows
+ * - Reactive Queries
+ *
+ *
+ * Features:
+ * - Realtime replication
+ * - Async replication
+ * - File sync
+ * - WebRTC sync
+ * - Bluetooth sync
+ * - USB sync
+ * - Sync over LAN
+ * - Multi-tab Support
+ * - Encryption
+ * - Compression
+ * - Live queries
  */
 
 export interface IHaveView {}
@@ -105,7 +130,7 @@ type Version = 1;
 /**
  * Each event has a UUID
  */
-type UUID = string;
+export type UUID = string;
 
 /**
  * Used to order events.
@@ -113,4 +138,4 @@ type UUID = string;
  * [0]: the datetime
  * [1]: the tick
  */
-export type HLCTimestamp = [number, number];
+export type HLCTimestamp = [Date, number];
